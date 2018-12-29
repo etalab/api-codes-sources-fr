@@ -10,9 +10,10 @@ import shutil
 DATA_FOLDER = 'data'
 TARGET_FOLDER = 'api/repos/'
 
-# Save CSV files
 os.mkdir(DATA_FOLDER)
+os.makedirs(TARGET_FOLDER, exist_ok=True)
 
+# Save CSV files
 resp = urlopen("https://github.com/etalab/inventaire-codes-sources-organismes-publics/archive/master.zip")
 archive = ZipFile(BytesIO(resp.read()))
 for file in [f for f in archive.namelist() if '/repositories/' in f]:
