@@ -4,7 +4,7 @@ Une API pour lister les dépôts de code publiés par les comptes d’organisati
 Les données proviennent du [répertoire etalab/inventaire-codes-sources-organismes-publics](https://github.com/etalab/inventaire-codes-sources-organismes-publics/).
 
 ## Déploiement et hébergement
-Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.py`.
+Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.py`. Le build est lancé automatiquement toutes les 3 heures grâce à CircleCI.
 
 ## Endpoints
 - `https://api-codes-sources-fr.antoine-augusti.fr/api/repos/:slug`
