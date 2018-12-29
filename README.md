@@ -7,7 +7,10 @@ Les données proviennent du [répertoire etalab/inventaire-codes-sources-organis
 Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.py`. Le build est lancé automatiquement toutes les heures grâce à CircleCI.
 
 ## Endpoints
-- `https://api-codes-sources-fr.antoine-augusti.fr/api/repos/:slug`
+Les endpoints retournent des données au format JSON.
+
+- Tous les répertoires : `https://api-codes-sources-fr.antoine-augusti.fr/api/repos/all`
+- Tous les répertoires d'un organisme : `https://api-codes-sources-fr.antoine-augusti.fr/api/repos/:slug`
 
 Exemple :
 - https://api-codes-sources-fr.antoine-augusti.fr/api/repos/dgfip
