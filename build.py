@@ -51,8 +51,8 @@ for file in [f for f in archive.namelist() if '/repositories/' in f]:
 os.rename(REPOS_DATA_FOLDER + '/all_repositories.csv', REPOS_DATA_FOLDER + '/all.csv')
 
 orgs_url = 'https://raw.githubusercontent.com/' + GITHUB_SRC + '/master/organisations/comptes-organismes-publics.csv'
-with urlopen(orgs_url) as testfile, open(ORGS_DATA_FOLDER + 'all.csv', 'w') as f:
-    f.write(testfile.read().decode())
+with urlopen(orgs_url) as orgs_file, open(ORGS_DATA_FOLDER + 'all.csv', 'w') as f:
+    f.write(orgs_file.read().decode())
 
 # Convert CSV files to JSON
 convert_csv(REPOS_DATA_FOLDER, REPOS_TARGET_FOLDER)
