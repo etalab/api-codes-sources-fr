@@ -9,8 +9,8 @@ Le déploiement est assuré par Netlify, le fichier de build se trouve dans `bui
 ## Endpoints
 Les endpoints retournent des données au format JSON.
 
-- Tous les répertoires : `https://api-codes-sources-fr.antoine-augusti.fr/api/repos/all`
-- Toutes les organisations : `https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all`
+- Tous les répertoires : [`https://api-codes-sources-fr.antoine-augusti.fr/api/repos/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/repos/all)
+- Toutes les organisations : [`https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all)
 - Tous les répertoires d'un organisme : `https://api-codes-sources-fr.antoine-augusti.fr/api/repos/:slug`
 
 Exemple :
