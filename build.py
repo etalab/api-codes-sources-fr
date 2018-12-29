@@ -11,6 +11,8 @@ DATA_FOLDER = 'data'
 TARGET_FOLDER = 'api/repos/'
 
 # Save CSV files
+os.mkdir(DATA_FOLDER)
+
 resp = urlopen("https://github.com/etalab/inventaire-codes-sources-organismes-publics/archive/master.zip")
 archive = ZipFile(BytesIO(resp.read()))
 for file in [f for f in archive.namelist() if '/repositories/' in f]:
