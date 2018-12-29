@@ -1,2 +1,4 @@
 / /api/repos/all 301
+
 /api/repos/:slug /api/repos/:slug.json 200
+/api/organisations/all /api/organisations/all.json 200

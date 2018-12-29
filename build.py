@@ -7,14 +7,36 @@ from zipfile import ZipFile
 from urllib.request import urlopen
 import shutil
 
-DATA_FOLDER = 'data'
-TARGET_FOLDER = 'api/repos/'
+GITHUB_SRC = 'etalab/inventaire-codes-sources-organismes-publics'
 
-os.mkdir(DATA_FOLDER)
-os.makedirs(TARGET_FOLDER, exist_ok=True)
+REPOS_DATA_FOLDER = 'data/repos/'
+ORGS_DATA_FOLDER = 'data/organisations/'
+REPOS_TARGET_FOLDER = 'api/repos/'
+ORGS_TARGET_FOLDER = 'api/organisations/'
+
+
+def convert_csv(base_folder, target_folder):
+    for csv_filepath in glob.glob(base_folder + '/*.csv'):
+        filename = os.path.splitext(os.path.basename(csv_filepath))[0]
+        json_filepath = target_folder + filename + '.json'
+
+        with open(csv_filepath) as f:
+            reader = csv.DictReader(f)
+            rows = list(reader)
+
+        with open(json_filepath, 'w') as f:
+            json.dump(rows, f, ensure_ascii=False)
+
+
+folders = [
+    REPOS_DATA_FOLDER, ORGS_DATA_FOLDER,
+    REPOS_TARGET_FOLDER, ORGS_TARGET_FOLDER,
+]
+for folder in folders:
+    os.makedirs(folder, exist_ok=True)
 
 # Save CSV files
-resp = urlopen("https://github.com/etalab/inventaire-codes-sources-organismes-publics/archive/master.zip")
+resp = urlopen("https://github.com/" + GITHUB_SRC + "/archive/master.zip")
 archive = ZipFile(BytesIO(resp.read()))
 for file in [f for f in archive.namelist() if '/repositories/' in f]:
     filename = os.path.basename(file)
@@ -22,20 +44,16 @@ for file in [f for f in archive.namelist() if '/repositories/' in f]:
         continue
 
     source = archive.open(file)
-    target = open(os.path.join(DATA_FOLDER, filename), "wb")
+    target = open(os.path.join(REPOS_DATA_FOLDER, filename), "wb")
     with source, target:
         shutil.copyfileobj(source, target)
 
-os.rename(DATA_FOLDER + '/all_repositories.csv', DATA_FOLDER + '/all.csv')
+os.rename(REPOS_DATA_FOLDER + '/all_repositories.csv', REPOS_DATA_FOLDER + '/all.csv')
+
+orgs_url = 'https://raw.githubusercontent.com/' + GITHUB_SRC + '/master/organisations/comptes-organismes-publics.csv'
+with urlopen(orgs_url) as testfile, open(ORGS_DATA_FOLDER + 'all.csv', 'w') as f:
+    f.write(testfile.read().decode())
 
 # Convert CSV files to JSON
-for csv_filepath in glob.glob(DATA_FOLDER + '/*.csv'):
-    filename = os.path.splitext(os.path.basename(csv_filepath))[0]
-    json_filepath = TARGET_FOLDER + filename + '.json'
-
-    with open(csv_filepath) as f:
-        reader = csv.DictReader(f)
-        rows = list(reader)
-
-    with open(json_filepath, 'w') as f:
-        json.dump(rows, f, ensure_ascii=False)
+convert_csv(REPOS_DATA_FOLDER, REPOS_TARGET_FOLDER)
+convert_csv(ORGS_DATA_FOLDER, ORGS_TARGET_FOLDER)
