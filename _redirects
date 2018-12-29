@@ -1,1 +1,1 @@
-/api/repos/:slug api/repos/:slug.json
+/api/repos/:slug /api/repos/:slug.json 200
