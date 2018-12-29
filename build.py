@@ -26,6 +26,8 @@ for file in [f for f in archive.namelist() if '/repositories/' in f]:
     with source, target:
         shutil.copyfileobj(source, target)
 
+os.rename(DATA_FOLDER + '/all_repositories.csv', DATA_FOLDER + '/all.csv')
+
 # Convert CSV files to JSON
 for csv_filepath in glob.glob(DATA_FOLDER + '/*.csv'):
     filename = os.path.splitext(os.path.basename(csv_filepath))[0]
