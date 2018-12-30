@@ -1,10 +1,10 @@
 # API Codes Sources France
 Une API pour lister les dépôts de code publiés par les comptes d’organisation d’organismes publics en France.
 
-Les données proviennent du [répertoire etalab/inventaire-codes-sources-organismes-publics](https://github.com/etalab/inventaire-codes-sources-organismes-publics/).
+Les données proviennent du [répertoire AntoineAugusti/data-codes-sources-fr](https://github.com/AntoineAugusti/data-codes-sources-fr).
 
 ## Déploiement et hébergement
-Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.py`. Le build est lancé automatiquement toutes les heures grâce à CircleCI.
+Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé deux fois par heure grâce à CircleCI.
 
 ## Endpoints
 Les endpoints retournent des données au format JSON.
@@ -35,6 +35,24 @@ Exemple :
       "topics":""
    }
 ]
+```
+
+- Les informations sur une organisation `https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/:slug`
+
+Exemple :
+- https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/dgfip
+```json
+{
+   "nom":"Direction générale des finances publiques",
+   "organisation":null,
+   "organisation_url":"https://github.com/DGFiP",
+   "blog":"http://www.economie.gouv.fr/dgfip",
+   "adresse":"France",
+   "email":"",
+   "est_verifiee":false,
+   "nombre_repertoires":1,
+   "date_creation":"2014-09-15T13:24:47Z"
+}
 ```
 
 ## Licence
