@@ -9,28 +9,30 @@ Le déploiement est assuré par Netlify, le fichier de build se trouve dans `bui
 ## Endpoints
 Les endpoints retournent des données au format JSON.
 
-- Tous les répertoires : [`https://api-codes-sources-fr.antoine-augusti.fr/api/repos/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/repos/all)
+- Tous les répertoires : [`https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/all)
 - Toutes les organisations : [`https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all)
-- Tous les répertoires d'un organisme : `https://api-codes-sources-fr.antoine-augusti.fr/api/repos/:slug`
+- Tous les répertoires d'un organisme : `https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/:slug`
 
 Exemple :
-- https://api-codes-sources-fr.antoine-augusti.fr/api/repos/dgfip
+- https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/dgfip
 ```json
 [
    {
-      "Nom":"Test-Compta-Demat",
-      "Organisation":"https://github.com/DGFiP",
-      "URL":"https://github.com/DGFiP/Test-Compta-Demat",
-      "Description":"Ce logiciel permet de contrôler le respect des normes des fichiers d'écritures comptables (FEC) conformément aux dispositions de l'article A.47 A-1 du livre des procédures fiscales.",
-      "Fork?":"false",
-      "Créé":"2014-08-19T10:30:26Z",
-      "Mis à jour":"2018-09-25T07:44:11Z",
-      "Homepage":"http://www.economie.gouv.fr/dgfip/controle-fiscal-et-lutte-contre-fraude",
-      "Stars":"17",
-      "# forks":"7",
-      "Licence":"",
-      "Issues":"17",
-      "Langages":"Perl"
+      "nom":"Test-Compta-Demat",
+      "organisation_nom":"DGFiP",
+      "organisation_url":"https://github.com/DGFiP",
+      "repertoire_url":"https://github.com/DGFiP/Test-Compta-Demat",
+      "description":"Ce logiciel permet de contrôler le respect des normes des fichiers d'écritures comptables (FEC) conformément aux dispositions de l'article A.47 A-1 du livre des procédures fiscales.",
+      "est_fork":false,
+      "date_creation":"2014-08-19T10:30:26Z",
+      "derniere_mise_a_jour":"2018-12-23T08:50:58Z",
+      "homepage":"http://www.economie.gouv.fr/dgfip/controle-fiscal-et-lutte-contre-fraude",
+      "nombre_stars":17,
+      "nombre_forks":8,
+      "licence":null,
+      "nombre_issues_ouvertes":17,
+      "langage":"Perl",
+      "topics":""
    }
 ]
 ```
