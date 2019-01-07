@@ -1,10 +1,13 @@
+[![CircleCI build status](https://img.shields.io/circleci/project/github/AntoineAugusti/api-codes-sources-fr.svg?style=flat-square)](https://circleci.com/gh/AntoineAugusti/api-codes-sources-fr)
+[![Software License](https://img.shields.io/badge/License-MIT-orange.svg?style=flat-square)](https://github.com/AntoineAugusti/api-codes-sources-fr/blob/master/LICENSE.md)
+
 # API Codes Sources France
 Une API pour lister les dépôts de code publiés par les comptes d’organisation d’organismes publics en France.
 
 Les données proviennent du [répertoire AntoineAugusti/data-codes-sources-fr](https://github.com/AntoineAugusti/data-codes-sources-fr).
 
 ## Déploiement et hébergement
-Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé deux fois par heure grâce à CircleCI.
+Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé régulièrement [grâce à CircleCI](https://circleci.com/gh/AntoineAugusti/api-codes-sources-fr).
 
 ## Endpoints
 Les endpoints retournent des données au format JSON.
