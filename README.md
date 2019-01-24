@@ -4,7 +4,7 @@
 # API Codes Sources France
 Une API pour lister les dépôts de code publiés par les comptes d’organisation d’organismes publics en France.
 
-Les données proviennent du [répertoire AntoineAugusti/data-codes-sources-fr](https://github.com/AntoineAugusti/data-codes-sources-fr).
+Les données proviennent du [répertoire etalab/data-codes-sources-fr](https://github.com/etalab/data-codes-sources-fr).
 
 ## Déploiement et hébergement
 Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé régulièrement [grâce à CircleCI](https://circleci.com/gh/AntoineAugusti/api-codes-sources-fr).
