@@ -2,3 +2,5 @@
 
 /api/repertoires/:slug /data-codes-sources-fr-master/data/repertoires/json/:slug.json 200
 /api/organisations/:slug /data-codes-sources-fr-master/data/organisations/json/:slug.json 200
+
+/api/stats/:slug /stats/:slug.json 200

@@ -58,5 +58,8 @@ Exemple :
 }
 ```
 
+### Statistiques
+- `/stats/last_repositories` : les 10 derniers répertoires créés
+
 ## Licence
 MIT
