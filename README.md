@@ -10,11 +10,11 @@ Les données proviennent du [répertoire etalab/data-codes-sources-fr](https://g
 Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé régulièrement [grâce à CircleCI](https://circleci.com/gh/AntoineAugusti/api-codes-sources-fr).
 
 ## Endpoints
-Les endpoints retournent des données au format JSON.
+Les endpoints retournent des données au format JSON. L'URL de base est https://api-codes-sources-fr.antoine-augusti.fr`.
 
-- Tous les répertoires : [`https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/all)
-- Toutes les organisations : [`https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all)
-- Tous les répertoires d'un organisme : `https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/:slug`
+- Tous les répertoires : [`/api/repertoires/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/all)
+- Toutes les organisations : [`/api/organisations/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all)
+- Tous les répertoires d'un organisme : `/api/repertoires/:slug`
 
 Exemple :
 - https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/dgfip
@@ -40,7 +40,7 @@ Exemple :
 ]
 ```
 
-- Les informations sur une organisation `https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/:slug`
+- Les informations sur une organisation `/api/organisations/:slug`
 
 Exemple :
 - https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/dgfip
@@ -59,7 +59,7 @@ Exemple :
 ```
 
 ### Statistiques
-- `/stats/last_repositories` : les 10 derniers répertoires créés
+- [`/api/stats/last_repositories`](https://api-codes-sources-fr.antoine-augusti.fr/api/stats/last_repositories) : les 10 derniers répertoires créés
 
 ## Licence
 MIT
