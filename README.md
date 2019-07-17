@@ -59,6 +59,7 @@ Exemple :
 ```
 
 ### Statistiques
+- [`/api/stats/general`](https://api-codes-sources-fr.antoine-augusti.fr/api/stats/general) : des statistiques à propos du nombre de dépôts, des organisations les plus actives, les principales licences etc.
 - [`/api/stats/last_repositories`](https://api-codes-sources-fr.antoine-augusti.fr/api/stats/last_repositories) : les 10 derniers répertoires créés
 
 ## Licence
