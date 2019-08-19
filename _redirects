@@ -1,4 +1,4 @@
-/ /api/organisations/all 301
+/ https://github.com/AntoineAugusti/api-codes-sources-fr 301
 
 /api/repertoires/:slug /data-codes-sources-fr-master/data/repertoires/json/:slug.json 200
 /api/organisations/:slug /data-codes-sources-fr-master/data/organisations/json/:slug.json 200
