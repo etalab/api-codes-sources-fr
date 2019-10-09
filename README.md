@@ -1,5 +1,5 @@
-[![CircleCI build status](https://img.shields.io/circleci/project/github/AntoineAugusti/api-codes-sources-fr.svg?style=flat-square)](https://circleci.com/gh/AntoineAugusti/api-codes-sources-fr)
-[![Software License](https://img.shields.io/badge/License-MIT-orange.svg?style=flat-square)](https://github.com/AntoineAugusti/api-codes-sources-fr/blob/master/LICENSE.md)
+[![CircleCI build status](https://img.shields.io/circleci/project/github/etalab/api-codes-sources-fr.svg?style=flat-square)](https://circleci.com/gh/etalab/api-codes-sources-fr)
+[![Software License](https://img.shields.io/badge/License-MIT-orange.svg?style=flat-square)](https://github.com/etalab/api-codes-sources-fr/blob/master/LICENSE.md)
 
 # API Codes Sources France
 Une API pour lister les dépôts de code publiés par les comptes d’organisation d’organismes publics en France.
@@ -7,17 +7,17 @@ Une API pour lister les dépôts de code publiés par les comptes d’organisati
 Les données proviennent du [répertoire etalab/data-codes-sources-fr](https://github.com/etalab/data-codes-sources-fr).
 
 ## Déploiement et hébergement
-Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé régulièrement [grâce à CircleCI](https://circleci.com/gh/AntoineAugusti/api-codes-sources-fr).
+Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé régulièrement [grâce à CircleCI](https://circleci.com/gh/etalab/api-codes-sources-fr).
 
 ## Endpoints
-Les endpoints retournent des données au format JSON. L'URL de base est https://api-codes-sources-fr.antoine-augusti.fr.
+Les endpoints retournent des données au format JSON. L'URL de base est https://api-code.etalab.gouv.fr`.
 
-- Tous les répertoires : [`/api/repertoires/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/all)
-- Toutes les organisations : [`/api/organisations/all`](https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/all)
+- Tous les répertoires : [`/api/repertoires/all`](https://api-code.etalab.gouv.fr/api/repertoires/all)
+- Toutes les organisations : [`/api/organisations/all`](https://api-code.etalab.gouv.fr/api/organisations/all)
 - Tous les répertoires d'un organisme : `/api/repertoires/:slug`
 
 Exemple :
-- https://api-codes-sources-fr.antoine-augusti.fr/api/repertoires/dgfip
+- https://api-code.etalab.gouv.fr/api/repertoires/dgfip
 ```json
 [
    {
@@ -43,7 +43,7 @@ Exemple :
 - Les informations sur une organisation `/api/organisations/:slug`
 
 Exemple :
-- https://api-codes-sources-fr.antoine-augusti.fr/api/organisations/dgfip
+- https://api-code.etalab.gouv.fr/api/organisations/dgfip
 ```json
 {
    "nom":"Direction générale des finances publiques",
@@ -59,8 +59,8 @@ Exemple :
 ```
 
 ### Statistiques
-- [`/api/stats/general`](https://api-codes-sources-fr.antoine-augusti.fr/api/stats/general) : des statistiques à propos du nombre de dépôts, des organisations les plus actives, les principales licences etc.
-- [`/api/stats/last_repositories`](https://api-codes-sources-fr.antoine-augusti.fr/api/stats/last_repositories) : les 10 derniers répertoires créés
+- [`/api/stats/general`](https://api-code.etalab.gouv.fr/api/stats/general) : des statistiques à propos du nombre de dépôts, des organisations les plus actives, les principales licences etc.
+- [`/api/stats/last_repositories`](https://api-code.etalab.gouv.fr/api/stats/last_repositories) : les 10 derniers répertoires créés
 
 ## Licence
 MIT
