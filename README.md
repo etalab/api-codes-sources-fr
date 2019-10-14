@@ -10,7 +10,7 @@ Les données proviennent du [répertoire etalab/data-codes-sources-fr](https://g
 Le déploiement est assuré par Netlify, le fichier de build se trouve dans `build.sh`. Le build est lancé régulièrement [grâce à CircleCI](https://circleci.com/gh/etalab/api-codes-sources-fr).
 
 ## Endpoints
-Les endpoints retournent des données au format JSON. L'URL de base est https://api-code.etalab.gouv.fr`.
+Les endpoints retournent des données au format JSON. L'URL de base est `https://api-code.etalab.gouv.fr`.
 
 - Tous les répertoires : [`/api/repertoires/all`](https://api-code.etalab.gouv.fr/api/repertoires/all)
 - Toutes les organisations : [`/api/organisations/all`](https://api-code.etalab.gouv.fr/api/organisations/all)
