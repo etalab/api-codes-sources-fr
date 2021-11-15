@@ -1,6 +1,10 @@
 [![CircleCI build status](https://img.shields.io/circleci/project/github/etalab/api-codes-sources-fr.svg?style=flat-square)](https://circleci.com/gh/etalab/api-codes-sources-fr)
 [![Software License](https://img.shields.io/badge/License-MIT-orange.svg?style=flat-square)](https://github.com/etalab/api-codes-sources-fr/blob/master/LICENSE.md)
 
+**Archivé** : ce dépôt est archivé et l'API n'est plus en place.
+
+Pour consulter les dépôts développés par le pôle logiciels libres d'Etalab, rendez-vous sur [SourceHut](https://git.sr.ht/~etalab/readme-logiciels-libres).
+
 # API Codes Sources France
 
 Une API pour lister les dépôts de code publiés par les comptes d’organisation d’organismes publics en France.
